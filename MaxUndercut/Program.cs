@@ -190,13 +190,16 @@ namespace MaxUndercut
         {
             string[] input = rawInput.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
 
-            // First check for specific commands
+            // Do nothing on a blank input
+            if (input.Length == 0)
+            {
+                return false;
+            }
+
+            // Check for specific commands
             // (Note that none of the cases can be valid stock symbols)
             switch (input[0].ToLower())
             {
-                case "":
-                    return false;
-
                 case "q":
                 case "-q":
                 case "quit":
