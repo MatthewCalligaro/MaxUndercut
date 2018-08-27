@@ -2,7 +2,7 @@
 Written by Matthew Calligaro, August 2018
 
 ## Summary
-MaxUndercut analyzes a stock's price history over the past month to calculate the average amount that one could undercut the stock's price with a limit order to buy and have the order execute in a given period of time.  This data can help the user choose how much to undercut the current stock price when placing a limit order.
+MaxUndercut analyzes a stock's price history over the past month to calculate the average amount that one could undercut/overcut the stock's price with a limit order and have the order execute in a given period of time.  This data can help the user choose the optimal price when placing a limit order to buy or sell.
 
 ## Disclaimer
 MaxUndercut is simply a tool for processing past data and does not claim to predict future behavior.  The confidence intervals provided refer to the training data and do not necessarily correspond to probabilities in the future.
@@ -28,8 +28,8 @@ After execution, data is saved in your working directory to a .csv file.  Runnin
 * `?`: prints the help dialog and creates InterpretingOutputHelp.csv.
 * `-o <filename>`: sets the default output filename.
 * `-v`: toggles the default verbose flag.  When set to true, MaxUndercut will print more detailed information to the console while executing.
-* `-v <true or false>`: Sets the default verbose flag to either true or false.
+* `-v <true or false>`: sets the default verbose flag to either true or false.
 * `-r`: toggles the default raw output flag.  When set to true, MaxUndercut will also save the raw output for each stock analyzed to a file named "{stock symbol}.csv" in your working directory.
-* `-r <true or false>`: Sets the raw output flag to either true or false.
-* `h-s <fast or slow>`: Sets the default execution speed.  When set to "fast", MaxUndercut only uses data from the past 15 days, which allows for faster execution time but provides less reliable data.
-settings: Prints the current default settings.
+* `-r <true or false>`: sets the raw output flag to either true or false.
+* `h-s <fast or slow>`: sets the default execution speed.  When set to "fast", MaxUndercut only uses data from the past 15 days, which allows for faster execution time but provides less reliable data.
+* `settings`: prints the current default settings.
